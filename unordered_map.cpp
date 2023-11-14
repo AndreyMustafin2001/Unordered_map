@@ -34,6 +34,9 @@ int main()
             break;
         }
     }
-    std :: cout << "\nResult: " << std :: boolalpha << all << std::endl;
+    if(all==true)std :: cout << "true"<< std :: endl;
+    else
+        std :: cout << "false"<< std :: endl;
+   // std :: cout << "\nResult: " << std :: boolalpha << all << std::endl;
     return 0;
 }
