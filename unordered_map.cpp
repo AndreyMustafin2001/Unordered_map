@@ -11,6 +11,7 @@ bool Function(std :: string ransomLetter,std :: string paper)
     std :: unordered_map<char, int> charCount2;
     for (char S : ransomLetter)
     {
+        if(S == ' ')continue;
         charCount2[S]++;
     }
     bool all = true;
