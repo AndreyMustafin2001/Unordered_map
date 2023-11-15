@@ -1,18 +1,9 @@
 #include <iostream>
 #include <unordered_map>
 #include <string>
-int main()
+bool Function(std :: string ransomLetter,std :: string paper)
 {
-    std :: string ransomLetter, paper;
-
-    std :: cout << "ransomLetter: ";
-    std :: getline(std::cin, ransomLetter);
-
-    std :: cout << "paper: ";
-    std :: getline(std::cin, paper);
-
     std :: unordered_map<char, int> charCount1;
-
     for (char S : paper)
     {
         charCount1[S]++;
@@ -34,9 +25,21 @@ int main()
             break;
         }
     }
-    if(all==true)std :: cout << "true"<< std :: endl;
+    return all;
+}
+int main()
+{
+    std :: string ransomLetter, paper;
+    std :: cout << "ransomLetter: ";
+    std :: getline(std::cin, ransomLetter);
+    std :: cout << "paper: ";
+    std :: getline(std::cin, paper);
+    std :: unordered_map<char, int> charCount1;
+
+    if(Function(ransomLetter, paper)==true)
+        std :: cout << "true"<< std :: endl;
     else
         std :: cout << "false"<< std :: endl;
-   // std :: cout << "\nResult: " << std :: boolalpha << all << std::endl;
+
     return 0;
 }
