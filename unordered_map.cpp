@@ -39,9 +39,7 @@ int main()
 
     std :: cout << "paper: ";
     std :: getline(std::cin, paper);
-
-    std :: unordered_map<char, int> charCount1;
-
+    
     if(isitLetter(ransomLetter, paper) == true)
         std :: cout << "true" << std :: endl;
     else
